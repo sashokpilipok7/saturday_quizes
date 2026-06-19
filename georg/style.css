@@ -1,0 +1,95 @@
+body {
+    font-family: 'Orbitron', sans-serif;
+    background: linear-gradient(rgba(10, 10, 30, 0.8), rgba(10, 10, 30, 0.8)), 
+                url('https://www.mevisto.com/media/c5/4d/d3/1709036796/Foto_21_Tod_2.jpg?ts=1709036796');
+    background-size: cover;
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#quiz-screen { max-width: 600px; width: 90%; text-align: center; }
+
+#answers-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    width: 100%;
+}
+
+.answer-btn {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #00f2ff;
+    border-radius: 15px;
+    background-color: transparent;
+    color: #00f2ff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60px; 
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.answer-btn:hover {
+    background-color: #00f2ff;
+    color: #0a0a1e;
+    transform: scale(1.05);
+}
+
+.main-btn {
+    padding: 15px 30px;
+    background: #7b2cbf;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.correct { background-color: #4caf50 !important; color: white !important; }
+.wrong { background-color: #f44336 !important; color: white !important; }
+.hide { display: none !important; }
+
+#explosion-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background: white;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+}
+
+@keyframes explode {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 1; background: red; }
+}
+
+.trigger-explosion {
+    animation: blast 0.5s ease-out forwards;
+}
+
+#death-screen {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.95);
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 2000;
+    font-size: 5rem;
+    text-transform: uppercase;
+    font-family: 'Orbitron', sans-serif;
+    pointer-events: none; /* Щоб не заважав клікам, якщо треба */
+}

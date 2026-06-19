@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e293b, #312e81);
+    color: #f8fafc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.quiz-container {
+    background: rgba(15, 23, 42, 0.9);
+    padding: 30px;
+    border-radius: 20px;
+    width: 450px;
+    text-align: center;
+    box-shadow: 0 0 25px rgba(99, 102, 241, 0.5);
+    border: 2px solid #6366f1;
+}
+
+button {
+    font-family: 'Orbitron', sans-serif;
+    background: #6366f1;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 18px;
+    margin: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #818cf8;
+    transform: scale(1.05);
+}
+
+.correct {
+    background: #22c55e !important;
+}
+
+.wrong {
+    background: #ef4444 !important;
+}
+
+.hide {
+    display: none;
+}

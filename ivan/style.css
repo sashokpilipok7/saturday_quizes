@@ -1,0 +1,100 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-image:url('https://i.imgur.com/NH3DAcO.png');
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    
+}
+
+#quiz-screen{
+    border:5px solid #B5E7FF;
+    border-radius: 15px;
+    padding:45px;
+    box-shadow:10px 10px 25px #2DA5D6;
+}
+
+
+.hide {
+    display:none;
+}
+
+.correct {
+    background-color:green;
+    
+}
+
+.wrong {
+    background-color:red;
+}
+
+#result-screen {
+    border:5px solid #B5E7FF;
+    border-radius: 15px;
+    padding:45px;
+    box-shadow:10px 10px 25px #2DA5D6;
+    background-image:url('https://png.pngtree.com/png-vector/20230628/ourmid/pngtree-colorful-celebration-background-with-confetti-and-muti-colors-ribbons-overlay-vector-png-image_7333039.png');
+}
+
+#start-screen {
+    border:5px solid #B5E7FF;
+    border-radius: 15px;
+    padding:45px;
+    box-shadow:10px 10px 25px #2DA5D6;
+}
+
+#start-btn {
+    border:3px solid #39613D;
+    background-color:#C7FFCC;
+    border-radius:5px;
+    color:#39613D;
+    font-size:30px;
+}
+
+#start-btn:hover {
+    transition:0.2s;
+    background-color:#E8FFEA;
+    box-shadow:0px 0px 25px #C7FFCC;
+}
+
+#restart-btn {
+    border:3px solid #1F3D69;
+    background-color:#9CC5FF;
+    border-radius:5px;
+    color:#1F3D69;
+    font-size:30px;
+}
+
+#restart-btn:hover {
+    transition:0.2s;
+    background-color:#C9E0FF;
+    box-shadow:0px 0px 25px #99BFF2;
+}
+
+#answer-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    margin:0 auto;
+}
+
+.answer-btn {
+    width:40%;
+    border:1px solid #BFB373;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin:5px;
+    padding:5px;
+    background-color:#FFFBE8;
+}
+
+.answer-btn:hover {
+    transition:0.2s;
+    background-color:#FFFEF2;
+    box-shadow:0px 0px 25px #FFFF94;
+}
+
+

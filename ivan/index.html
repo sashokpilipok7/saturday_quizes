@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+  <div class="app-container">
+
+    <div id="start-screen">
+      <h1>JavaScript Quiz</h1>
+      <button id="start-btn">Почати гру</button>
+    </div>
+
+    <div id="quiz-screen" class="hide">
+      <div class="header">
+        <span>Бали: <span id="score-display">0</span></span>
+      </div>
+
+      <h2 id="question-text">Питання</h2>
+
+      <div id="answer-buttons"></div>
+    </div>
+
+    <div id="result-screen" class="hide">
+      <h2>Квіз завершено</h2>
+      <p>Твій результат: <span id="final-score"></span></p>
+      <button id="restart-btn">Почати знову</button>
+    </div>
+
+  </div>
+    <script src="script.js"></script>
+</body>
+</html>
