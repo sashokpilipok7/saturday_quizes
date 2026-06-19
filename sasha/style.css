@@ -119,3 +119,11 @@ button{
     cursor: pointer;
     border-radius: 10px;
 }
+
+.red{
+    color: red!important;
+}
+
+.green{
+    color: greenyellow!important;
+}

@@ -32,6 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const questionText = document.querySelector('#question-text');
     const answersContainer = document.querySelector('#answers-container');
+    const scoreText = document.querySelector('#score-display');
+
     let questionIndex = 0;
     let score = 0;
     function showQuestion(question) {
@@ -40,10 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
         question.answers.forEach((answer, i) => {
             const button = document.createElement('button');
             button.innerText = answer;
-            button.onclick = () => checkAnswer(button, i);
-            answersContainer.appendChild(button);
-            button.innerText = answer;
-            butteanclick = () => checkAnswer(button, i);
+            button.onclick = () => checkAnswer(i);
             answersContainer.appendChild(button);
         });
     }
@@ -53,9 +52,18 @@ document.addEventListener('DOMContentLoaded', () => {
     function checkAnswer(answerIndex) {
         if (answerIndex == questions[questionIndex].correct) {
             score++;
+            scoreText.innerText = score;
             console.log("prawulna widpowid");
+            questionText.classList.add("green")
+            setTimeout(function () {
+                questionText.classList.remove("green")
+            }, 1000)
+
         } else {
-            console.log("Неправильна відповідь");
+            questionText.classList.add("red")
+            setTimeout(function () {
+                questionText.classList.remove("red")
+            }, 1000)
         }
         questionIndex++;
         showQuestion(questions[questionIndex]);
